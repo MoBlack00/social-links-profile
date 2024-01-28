@@ -1,0 +1,165 @@
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  background-color: var(--off-black);
+  color: var(--white);
+  text-transform: capitalize;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.attribution {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.attribution a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.card {
+  background-color: var(--dark-grey);
+  margin-top: 3rem;
+  text-align: center;
+  padding: 4rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.container {
+  max-width: 30rem;
+}
+
+.card__img {
+  width: 30%;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.card__img img {
+  width: 100%;
+}
+
+.card__location {
+  color: var(--green);
+  font-weight: 600;
+  margin-block: 1rem;
+}
+
+.card__intro {
+  display: inline-block;
+  margin-block: 2.2rem;
+}
+
+.card__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.card__links li {
+  background-color: var(--grey);
+  padding: 1.2rem 8rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card__links .link {
+  color: var(--white);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  font-weight: 600;
+}
+
+.card__links li:hover {
+  background-color: var(--green);
+}
+
+.card__links li:hover .link {
+  color: var(--off-black);
+}
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .card {
+    margin-inline: 2rem;
+  }
+}
